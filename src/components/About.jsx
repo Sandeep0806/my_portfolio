@@ -3,19 +3,22 @@ import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaDownload } from 'react
 
 export default function About() {
   return (
-    <section className="max-w-7xl mx-auto p-4 h-screen grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-8 items-start">
-      {/* Left - Profile sticky */}
-      <div className="flex flex-col items-center md:items-start md:col-span-1 sticky top-0 h-screen">
-        <ProfilePicture className="w-60 h-60 rounded-full" />
-        <h1 className="text-4xl font-bold text-cyan-400 mt-6 text-center md:text-left">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 min-h-screen grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-12">
+      {/* Left - Profile (Sticky on Desktop, Normal on Mobile) */}
+      <div className="flex flex-col items-center md:items-start md:col-span-1 md:sticky md:top-20 space-y-6">
+        <ProfilePicture className="w-40 h-40 sm:w-48 sm:h-48 lg:w-60 lg:h-60 rounded-full shadow-md shadow-cyan-500/50" />
+
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400 text-center md:text-left">
           SANDEEP KOKKONDA
         </h1>
-        <div className="flex space-x-6 mt-4">
+
+        {/* Socials */}
+        <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6">
           {[
-            { href: "https://github.com/Sandeep0806", label: "GitHub", icon: <FaGithub size={30} /> },
-            { href: "https://www.linkedin.com/in/sandeep-kokkonda-b78110243", label: "LinkedIn", icon: <FaLinkedin size={30} /> },
-            { href: "https://www.instagram.com/sandeep_gold06", label: "Instagram", icon: <FaInstagram size={30} /> },
-            { href: "mailto:kokkondasandeep10@gmail.com", label: "Email", icon: <FaEnvelope size={30} /> },
+            { href: "https://github.com/Sandeep0806", label: "GitHub", icon: <FaGithub size={26} /> },
+            { href: "https://www.linkedin.com/in/sandeep-kokkonda-b78110243", label: "LinkedIn", icon: <FaLinkedin size={26} /> },
+            { href: "https://www.instagram.com/sandeep_gold06", label: "Instagram", icon: <FaInstagram size={26} /> },
+            { href: "mailto:kokkondasandeep10@gmail.com", label: "Email", icon: <FaEnvelope size={26} /> },
           ].map(({ href, label, icon }) => (
             <a
               key={label}
@@ -31,73 +34,66 @@ export default function About() {
         </div>
       </div>
 
-      {/* Right - Outer container hides scrollbar */}
-      <div style={{ overflow: 'hidden', height: '100vh' }} className="md:col-span-2 pr-4">
-        {/* Inner scrollable container with paddingRight and scrollbarWidth none */}
-        <div
-          style={{
-            overflowY: 'scroll',
-            height: '100%',
-            paddingRight: '16px',
-            scrollbarWidth: 'none'  // Hides scrollbar in Firefox
-          }}
-          className="text-left flex flex-col"
-        >
-          <h3 className="text-3xl font-bold text-cyan-400 mb-6">ABOUT ME 👨🏻‍💻</h3>
-          <p className="text-sm md:text-lg text-gray-300 leading-relaxed mb-6">
-            Hello! I'm <strong>SANDEEP KOKKONDA</strong>, a dedicated BTech student specializing in Computer Science Engineering (CSE) at ACE Engineering College, Ghatkesar.
+      {/* Right - Content */}
+      <div className="md:col-span-2 flex flex-col space-y-8 text-gray-300 leading-relaxed">
+        {/* About */}
+        <div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-4">ABOUT ME 👨🏻‍💻</h3>
+          <p className="text-base sm:text-lg">
+            Hello! I'm <strong>SANDEEP KOKKONDA</strong>, a dedicated BTech student specializing in Computer Science Engineering (CSE) at ACE Engineering College, Hyderabad.
             With a strong passion for programming and problem-solving, I thrive on exploring innovative technologies and applying them to practical, real-world scenarios.
             <br /><br />
             As an enthusiastic AI learner and web developer, I constantly seek opportunities to expand my technical expertise,
             staying up-to-date with emerging trends in software development, artificial intelligence, and web technologies.
             I take pride in writing clean, efficient, and scalable code to build impactful solutions that address real-world challenges.
           </p>
+        </div>
 
-          <section>
-            <h2 className="text-4xl font-bold text-cyan-400 mb-6">Education 🎓</h2>
-            <div className="space-y-8 text-gray-300 text-base md:text-lg leading-relaxed">
-              <div>
-                <h3 className="font-semibold text-white text-xl mb-1">B.Tech in Computer Science Engineering (CSE)</h3>
-                <p>ACE Engineering College, Hyderabad, Telangana, India (2023 – 2027)</p>
-                <p>Current CGPA: <strong>7.93</strong></p>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-xl mb-1">Intermediate (MPC)</h3>
-                <p>ABV Junior College, Jangaon, Telangana, India (2020 – 2022)</p>
-                <p>Percentage: <strong>50.5%</strong></p>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-xl mb-1">SSC</h3>
-                <p>Ekashila Public School, Jangaon, Telangana, India (2020)</p>
-                <p>CGPA: <strong>10.0</strong></p>
-              </div>
+        {/* Education */}
+        <section>
+          <h2 className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-6">Education 🎓</h2>
+          <div className="space-y-6">
+            {/* B.Tech */}
+            <div>
+              <h3 className="font-semibold text-white text-lg sm:text-xl">B.Tech in Computer Science Engineering (CSE)</h3>
+              <p>ACE Engineering College, Hyderabad, Telangana, India (2023 – 2027)</p>
+              <p>Current CGPA: <strong>7.93</strong></p>
             </div>
 
-            <p className="mt-8">
-              I believe education is more than just books and grades. It’s about understanding how to use what you learn to{' '}
-              <span className="font-semibold text-black dark:text-white">create</span>,{' '}
-              <span className="font-semibold text-black dark:text-white">solve problems</span>, and{' '}
-              <span className="font-semibold text-black dark:text-white">make a difference</span>. With every step in my studies,
-              I’m building the skills and mindset needed to grow in the fast-changing world of technology.
-            </p>
-          </section>
+            {/* Intermediate */}
+            <div>
+              <h3 className="font-semibold text-white text-lg sm:text-xl">Intermediate (MPC)</h3>
+              <p>ABV Junior College, Jangaon, Telangana, India (2020 – 2022)</p>
+              <p>Percentage: <strong>50.5%</strong></p>
+            </div>
 
-          {/* Download Resume button */}
-          <div className="mt-auto pt-6 border-t border-cyan-400 flex justify-center md:justify-start">
-            <a
-              href="/resume.pdf" // Ensure this file is in your public folder
-              download="resume.pdf"
-              className="inline-flex items-center space-x-2 px-5 py-3 bg-cyan-600 hover:bg-cyan-700 transition-colors rounded text-white font-semibold"
-              aria-label="Download Resume"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaDownload size={20} />
-              <span>Download Resume</span>
-            </a>
+            {/* SSC */}
+            <div>
+              <h3 className="font-semibold text-white text-lg sm:text-xl">SSC</h3>
+              <p>Ekashila Public School, Jangaon, Telangana, India (2020)</p>
+              <p>CGPA: <strong>10.0</strong></p>
+            </div>
           </div>
+
+          <p className="mt-6 text-base sm:text-lg">
+            I believe education is more than just books and grades. It’s about understanding how to use what you learn to{' '}
+            <span className="font-semibold text-cyan-300">create</span>,{' '}
+            <span className="font-semibold text-cyan-300">solve problems</span>, and{' '}
+            <span className="font-semibold text-cyan-300">make a difference</span>.
+          </p>
+        </section>
+
+        {/* Resume Button */}
+        <div className="pt-6 flex justify-center md:justify-start">
+          <a
+            href="/resume.pdf" // Place your resume.pdf in "public" folder
+            download="Sandeep_Kokkonda_Resume.pdf"
+            className="inline-flex items-center space-x-2 px-5 py-3 bg-cyan-600 hover:bg-cyan-700 transition-colors rounded-md text-white font-semibold shadow-md shadow-cyan-500/40"
+            aria-label="Download Resume"
+          >
+            <FaDownload size={20} />
+            <span>Download Resume</span>
+          </a>
         </div>
       </div>
     </section>
