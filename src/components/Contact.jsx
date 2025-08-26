@@ -42,7 +42,7 @@ export default function Contact() {
                  transition-all duration-1000"
     >
       <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-center border-b-4 border-cyan-500 pb-2 max-w-max mx-auto">
-        Contact Me
+        Contact Me 📩
       </h2>
 
       <div className="flex flex-col lg:flex-row gap-10">

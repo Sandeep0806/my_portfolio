@@ -23,7 +23,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-extrabold text-cyan-500 mb-10 text-center border-b-4 border-cyan-400 pb-2 w-fit mx-auto">
-          Projects
+          Projects📚
         </h2>
 
         {/* Grid Layout for Projects */}

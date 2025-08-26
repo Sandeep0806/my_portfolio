@@ -56,7 +56,7 @@ export default function Skills() {
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-cyan-500 mb-10 text-center 
                        border-b-4 border-cyan-400 pb-2 w-fit mx-auto">
-          My Skills
+          My Skills💡
         </h2>
 
         {/* Category & Skills */}
