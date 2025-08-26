@@ -36,13 +36,15 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gradient-to-tr from-[#141727] via-[#181E36] to-[#1B2040] rounded-lg shadow-lg text-white"
+      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 
+                 bg-gradient-to-tr from-[#0f172a] via-[#1e293b] to-[#475569]
+                 rounded-lg shadow-lg text-white
+                 transition-all duration-1000"
     >
       <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-center border-b-4 border-cyan-500 pb-2 max-w-max mx-auto">
         Contact Me
       </h2>
 
-      {/* Responsive Layout */}
       <div className="flex flex-col lg:flex-row gap-10">
         {/* Contact Info */}
         <div className="lg:w-1/2 text-gray-300 space-y-6">
@@ -105,21 +107,21 @@ export default function Contact() {
             name="name"
             placeholder="Your Name"
             required
-            className="p-3 rounded bg-[#141727] text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            className="p-3 rounded bg-[#141727] text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
             required
-            className="p-3 rounded bg-[#141727] text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            className="p-3 rounded bg-[#141727] text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"
           />
           <textarea
             name="message"
             placeholder="Message"
             rows={5}
             required
-            className="p-3 rounded bg-[#141727] text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            className="p-3 rounded bg-[#141727] text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"
           ></textarea>
           <button
             type="submit"

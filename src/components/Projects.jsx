@@ -1,19 +1,21 @@
 export default function Projects() {
   const projects = [
     {
-      name: "Portfolio Website",
-      date: "Aug 2025",
-      description:
-        "Built a fully responsive portfolio website showcasing projects, skills, and achievements. Deployed on a custom domain: sandeepkokkonda.online. Implemented clean UI/UX design, improving visitor engagement by 40%.",
-      tags: ["CSS", "HTML", "Deployment"],
-    },
+  name: "Portfolio Website",
+  date: "Aug 2025",
+  description: 
+    "Built a modern, highly responsive portfolio website using React and Vite for fast development and optimized bundling, styled with Tailwind CSS for utility-first, customizable design. The site effectively showcases projects, skills, and achievements, and is deployed on a custom domain: sandeepkokkonda.online. Implemented smooth UI/UX enhancements, increasing visitor engagement by 40%.",
+  tags: ["React", "Vite", "Tailwind CSS","HTML"],
+},
+
     {
-      name: "AI Healthcare Bot System",
-      date: "Jul 2025",
-      description:
-        "Conversational intelligent platform that simulates human-like interactions to provide healthcare support. Built with focus on natural dialog and integrating knowledge retrieval.",
-      tags: ["AI", "Chatbot", "Healthcare"],
-    },
+  name: "AI Healthcare Bot System",
+  date: "Jul 2025",
+  description:
+    "Developed an intelligent healthcare chatbot system using Django for backend web framework, integrating AI capabilities to simulate human-like conversation and provide healthcare support. The system enables natural dialog interaction, appointment management, and personalized health assistance via a user-friendly web interface. Utilized Python machine learning models and natural language processing for accurate responses and patient engagement.",
+  tags: ["AI", "Chatbot", "Healthcare", "Django"],
+},
+
   ];
 
   return (

@@ -40,3 +40,30 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Hide scrollbar but keep scrolling on most browsers */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  /* scrollbar-width removed to avoid warning */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Hide scrollbar for WebKit browsers specifically for your nested scroll container */
+.md\:col-span-2 > div::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prevent grid container and columns from expanding and moving */
+.your-grid-container-class {
+  min-width: 0;
+  min-height: 0;
+}
+
+.md\:col-span-1,
+.md\:col-span-2 {
+  min-width: 0;
+  min-height: 0;
+  overflow-wrap: break-word;
+}
