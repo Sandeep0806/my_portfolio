@@ -9,7 +9,7 @@ export default function About() {
         <ProfilePicture className="w-40 h-40 sm:w-48 sm:h-48 lg:w-60 lg:h-60 rounded-full shadow-md shadow-cyan-500/50" />
 
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400 text-center md:text-left">
-          SANDEEP KOKKONDA
+          SANDEEP 
         </h1>
 
         {/* Socials */}
