@@ -41,7 +41,8 @@ export default function App() {
             tabIndex={0}
             onKeyPress={(e) => { if (e.key === 'Enter') scrollToAbout() }}
           >
-            Kokkonda
+          
+          Sandeep_Kokkonda
           </div>
 
           {/* Desktop Nav */}
