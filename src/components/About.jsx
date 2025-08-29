@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 min-h-screen grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-12">
       {/* Left - Profile (Sticky on Desktop, Normal on Mobile) */}
-      <div className="flex flex-col items-center md:items-start md:col-span-1 md:sticky md:top-20 space-y-6">
+      <div className="flex flex-col items-center md:items-start md:col-span-1 md:sticky md:top-20 md:self-start space-y-6">
         <ProfilePicture className="w-40 h-40 sm:w-48 sm:h-48 lg:w-60 lg:h-60 rounded-full shadow-md shadow-cyan-500/50" />
 
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400 text-center md:text-left">
