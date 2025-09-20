@@ -13,6 +13,18 @@ const certifications = [
     imgSrc: "/certifications/oci-devops-cert.png", // Replace with real path
     alt: "Oracle Cloud Infrastructure DevOps Certification",
   },
+  {
+    id: 3,
+    title: "TCS iON Career Edge - Young Professional",
+    imgSrc: "/certifications/tcs ion career.png", // Use your own image path
+    alt: "TCS iON Career Edge Certificate",
+  },
+  {
+    id: 4,
+    title: "Networking Virtual Internship (AICTE, EduSkills, Juniper Networks)",
+    imgSrc: "/certifications/juniper networking internship.png", // Use your own image path
+    alt: "Networking Virtual Internship Certificate",
+  }
 ];
 
 export default function Certifications() {
