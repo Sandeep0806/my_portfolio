@@ -57,7 +57,7 @@ export default function About() {
             <div>
               <h3 className="font-semibold text-white text-lg sm:text-xl">B.Tech in Computer Science Engineering (CSE)</h3>
               <p>ACE Engineering College, Hyderabad, Telangana, India (2023 – 2027)</p>
-              <p>Current CGPA: <strong>7.97</strong></p>
+              <p>Current CGPA: <strong>7.98</strong></p>
             </div>
 
             {/* Intermediate */}
