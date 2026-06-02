@@ -1,97 +1,79 @@
-import React, { useState } from "react";
+export default function Projects() {
+  const projects = [
+    {
+      name: "Portfolio Website",
+      date: "Aug 2025",
+      description:
+        "Built a modern, highly responsive portfolio website using React and Vite for fast development and optimized bundling, styled with Tailwind CSS for utility-first, customizable design. The site effectively showcases projects, skills, and achievements, and is deployed on a custom domain: sandeepkokkonda.online. Implemented smooth UI/UX enhancements, increasing visitor engagement by 40%.",
+      tags: ["React", "Vite", "Tailwind CSS", "HTML"],
+    },
 
-const certifications = [
-  {
-    id: 1,
-    title: "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
-    imgSrc: "/certifications/oci-data-science-cert.png", // Replace with real path
-    alt: "Oracle Cloud Infrastructure Data Science Certification",
-  },
-  {
-    id: 2,
-    title: "Oracle Cloud Infrastructure DevOps Professional Certification",
-    imgSrc: "/certifications/oci-devops-cert.png", // Replace with real path
-    alt: "Oracle Cloud Infrastructure DevOps Certification",
-  },
-  {
-    id: 3,
-    title: "TCS iON Career Edge - Young Professional",
-    imgSrc: "/certifications/tcs ion career.png", // Use your own image path
-    alt: "TCS iON Career Edge Certificate",
-  },
-  {
-    id: 4,
-    title: "Networking Virtual Internship (AICTE, EduSkills, Juniper Networks)",
-    imgSrc: "/certifications/juniper networking internship.png", // Use your own image path
-    alt: "Networking Virtual Internship Certificate",
-  }
-];
+    {
+      name: "AI Healthcare Bot System",
+      date: "Jul 2025",
+      description:
+        "Developed an intelligent healthcare chatbot system using Django for backend web framework, integrating AI capabilities to simulate human-like conversation and provide healthcare support. The system enables natural dialog interaction, appointment management, and personalized health assistance via a user-friendly web interface. Utilized Python machine learning models and natural language processing for accurate responses and patient engagement.",
+      tags: ["AI", "Chatbot", "Healthcare", "Django"],
+    },
 
-export default function Certifications() {
-  const [openCertId, setOpenCertId] = useState(null);
+    {
+      name: "Image Labelling for Live Video using Hybrid Quantum Computing",
+      date: "Apr 2026",
+      description:
+        "Built a video labeling system using Python and OpenCV to automate frame annotation and applied machine learning techniques for object and activity labeling in video datasets. Designed a structured workflow for managing labeled video data, ensuring efficient dataset organization and processing. Utilized Git and GitHub for version control, collaboration, and project deployment.",
+      tags: [
+        "Python",
+        "OpenCV",
+        "Machine Learning",
+        "Quantum Computing",
+        "Git",
+        "GitHub",
+      ],
+    },
+  ];
 
   return (
-    <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-12 flex flex-col items-center">
-      {/* Heading */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-400 mb-12 text-center border-b-4 border-cyan-400 pb-2 w-fit">
-        Certifications 🏆
-      </h2>
+    <section className="py-12 px-4 sm:px-6 lg:px-12 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <div className="max-w-6xl mx-auto">
+        {/* Title */}
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-cyan-500 mb-10 text-center border-b-4 border-cyan-400 pb-2 w-fit mx-auto">
+          Projects 📚
+        </h2>
 
-      {/* Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
-        {certifications.map(({ id, title, imgSrc, alt }) => (
-          <div
-            key={id}
-            className="rounded-xl overflow-hidden shadow-md border-2 border-cyan-400 cursor-pointer 
-                       hover:shadow-cyan-400/50 transition duration-300"
-            onClick={() => setOpenCertId(id)}
-          >
-            <img
-              src={imgSrc}
-              alt={alt}
-              className="w-full h-56 sm:h-64 object-contain bg-white"
-              loading="lazy"
-            />
-            <div className="p-3 sm:p-4 bg-[#181E36] text-white text-center font-medium sm:font-semibold text-sm sm:text-base">
-              {title}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Modal */}
-      {openCertId && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50"
-          onClick={() => setOpenCertId(null)}
-        >
-          <div
-            className="relative p-4 bg-gray-800 rounded-xl max-w-4xl w-full flex flex-col items-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Certification Image */}
-            <img
-              src={certifications.find((c) => c.id === openCertId).imgSrc}
-              alt={certifications.find((c) => c.id === openCertId).alt}
-              className="max-h-[70vh] w-auto rounded-lg shadow-lg object-contain"
-            />
-
-            {/* Close Button */}
-            <button
-              className="absolute top-2 right-2 text-white bg-cyan-600 rounded-full p-2 hover:bg-cyan-400 transition"
-              aria-label="Close"
-              onClick={() => setOpenCertId(null)}
+        {/* Grid Layout for Projects */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map(({ name, date, description, tags }) => (
+            <div
+              key={name}
+              className="bg-[#111827] rounded-xl p-6 shadow-md hover:shadow-cyan-500/50 transition-transform transform hover:scale-105 duration-300"
             >
-              ✕
-            </button>
+              <h3 className="text-xl sm:text-2xl font-semibold text-white">
+                {name}
+              </h3>
 
-            {/* Title */}
-            <div className="mt-4 text-white text-sm sm:text-base md:text-lg text-center px-4">
-              {certifications.find((c) => c.id === openCertId).title}
+              <p className="text-cyan-400 font-medium mb-3 text-sm sm:text-base">
+                {date}
+              </p>
+
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                {description}
+              </p>
+
+              {/* Tags */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-semibold"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-      )}
+      </div>
     </section>
   );
 }
