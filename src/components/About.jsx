@@ -63,8 +63,7 @@ export default function About() {
             {/* Intermediate */}
             <div>
               <h3 className="font-semibold text-white text-lg sm:text-xl">Intermediate (MPC)</h3>
-              <p>ABV Junior College, Jangaon, Telangana, India (2020 – 2022)</p>
-              <p>Percentage: <strong>50.5%</strong></p>
+              <p>NARAYANA Junior College, UPPAL , Telangana, India (2020 – 2022)</p
             </div>
 
             {/* SSC */}
